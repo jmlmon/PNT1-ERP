@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#Mi carpeta para dejar cosas que no requieren versionado
+Metadata/
+
 # User-specific files
 *.rsuser
 *.suo
