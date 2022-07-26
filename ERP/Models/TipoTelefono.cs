@@ -2,8 +2,10 @@
 {
 	public enum TipoTelefono
 	{
-		CELULAR,
-		FIJO,
+		CELULAR_LABORAL,
+		CELULAR_PERSONAL,
+		FIJO_LABORAL,
+		FIJO_PERSONAL,
 		FAX
 	}
 }

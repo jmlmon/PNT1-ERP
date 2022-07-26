@@ -1,6 +1,6 @@
 ﻿namespace ERP.Models
 {
-	public enum ObraSocial
+	public enum ObraSocial // Enum con fines de normalización
 	{
 		GALENO,
 		OSDE,
