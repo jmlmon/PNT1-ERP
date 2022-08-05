@@ -1,22 +1,42 @@
-﻿namespace ERP.Models
+﻿using ERP.Helpers;
+using System.ComponentModel.DataAnnotations;
+
+namespace ERP.Models
 {
 
 	public class Posicion
 	{
 		#region Properties
 
+		public int Id { get; set; }
+
+		[Required(ErrorMessage = MensajesError.Requerido)]
 		public string Nombre { get; set; }
-		public string Descipcion { get; set; }
+
+		public string? Descipcion { get; set; }
+
+		[Required(ErrorMessage = MensajesError.Requerido)]
+		// la data Annotation para settear el SalarioMinimo como valor mínimo
 		public float sueldo { get; set; }
 
+		#endregion
 
+		# regionORM
+
+		[Required(ErrorMessage = MensajesError.Requerido)]
+		public int ResponsableId { get; set; }
+
+		[Required(ErrorMessage = MensajesError.Requerido)]
+		public int GerenciaId { get; set; }
+
+		public List<Empleado> Empleados { get; set; }
 		#endregion
 
 		#region NavProperties
 
-		public List<Empleado> Empleados { get; set; } // será una lista?
-		public Empleado Responsable { get; set; }
-		public Gerencia Gerencia { get; set; }
+
+		
+		
 
 		#endregion
 	}

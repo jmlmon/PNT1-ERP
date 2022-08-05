@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ERP.Helpers;
+using System.ComponentModel.DataAnnotations;
 
 namespace ERP.Models
 {
@@ -6,19 +7,30 @@ namespace ERP.Models
 	{
 		#region Properties
 
+		public int Id { get; set; }
+
+		[Required(ErrorMessage = MensajesError.Requerido)]
 		public string Nombre { get; set; }
+
+		[Required(ErrorMessage = MensajesError.Requerido)]
 		public string Rubro { get; set; }
+
 		[DataType(DataType.EmailAddress)]
+		[Required(ErrorMessage = MensajesError.Requerido)]
 		public string EmailContacto { get; set; }
 
 		#endregion
 
-		#region NavProperties
+		#region ORM
 
-		public List<Gerencia> Gerencias { get; set; } // es necesaria la relación?
-		public Imagen Logo { get; set; }
-		public Direccion Direccion { get; set; }
-		public Telefono TelefonoContacto { get; set; }
+		[Required(ErrorMessage = MensajesError.Requerido)]
+		public int DireccionId { get; set; }
+
+		public List<Gerencia> Gerencias { get; set; }
+
+		public List<Imagen> Imagenes { get; set; }
+		
+		public List<Telefono> Telefonos { get; set; }
 
 		#endregion
 	}

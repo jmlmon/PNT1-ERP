@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+.SideBar {
+	position: fixed;
+	left: 10px;
+	width: 250px;
+	height: 100%;
+	background: #085185;
+}
+
+.SideBar header {
+	font-size: 23px;
+	color: white;
+	text-align: center;
+	line-height: 72px;
+	background: #085185;
+	user-select: none;
+}
+
+.SideBar ul a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 50px;
+	font-size: 20px;
+	color: white;
+	padding-left: 42px;
+	box-sizing: border-box;
+	transition: .5s;
+	user-select: none;
+}
+
+ul li:hover a {
+	padding-left: 60px;
+}
