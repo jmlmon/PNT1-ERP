@@ -14,5 +14,9 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #085185;
+    background-image: url(../img/blue-bgn.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }

@@ -1,4 +1,5 @@
 ﻿using ERP.Helpers;
+using System.ComponentModel.DataAnnotations;
 
 namespace ERP.Models
 {
@@ -16,5 +17,6 @@ namespace ERP.Models
 
 		#region ORM
 		public int EmpresaId { get; set; } // no es required porque la imagen puede ser de un perfil de usuario
+		#endregion
 	}
 }

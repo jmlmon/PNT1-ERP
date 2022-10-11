@@ -21,7 +21,7 @@ namespace ERP.Models
 
 		#endregion
 
-		# regionORM
+		# region ORM
 
 		[Required(ErrorMessage = MensajesError.Requerido)]
 		public int ResponsableId { get; set; }
